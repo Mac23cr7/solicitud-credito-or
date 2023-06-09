@@ -1,0 +1,1 @@
+web: gunicorn darient_credit.wsgi --log-level debug
