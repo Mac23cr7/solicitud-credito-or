@@ -131,19 +131,11 @@ USE_TZ = True
 
 #Ruta para poder utilizar archivos estaticos, como css, bootstrap
 STATIC_URL = '/static/'
-STATIC_FILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-#Ruta para poder utilizar archivos media, imagenes, archivos, etc
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
