@@ -1,0 +1,65 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block title %}
+    Listado de Bancos
+{% endblock title %}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/lib/datatable/dataTables.bootstrap.min.css' %}">
+{% endblock extra_css %}
+
+
+{% block creacion%}
+
+<div class="col-md-4 pt-4">
+    <button type="button" class="btn btn-success" class="col" onclick="abrir_modal_creacion('{% url 'credito:crear_credito' %}');"> REGISTRAR CREDITO</button>
+</div>
+
+
+
+{% endblock creacion%}
+
+{% block body %}
+
+
+        <table  id = "tabla_credito" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cliente</th>
+                    <th>Descripción</th>
+                    <th>Pago Minimo</th>
+                    <th>Pago Maximo</th>
+                    <th>Plazo Credito</th>
+                    <th>Banco</th>
+                    <th>Tipo Credito</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+
+    <div class="modal fade" id="creacion" role="dialog">
+
+    </div>
+
+
+    <div class="modal fade" id="edicion" role="dialog">
+
+    </div>
+
+    <div class="modal fade" id="eliminacion" role="dialog">
+
+    </div>
+
+
+{% endblock body %}
+
+{% block extrajs %}
+
+<script src="{% static 'js/lib/data-table/datatables.min.js' %}"></script>
+<script src="{% static 'js/lib/data-table/dataTables.bootstrap.min.js' %}"></script>
+<script src="{% static 'js/credito/index.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+{% endblock extrajs %}
