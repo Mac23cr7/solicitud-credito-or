@@ -137,7 +137,7 @@ STATIC_FILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
