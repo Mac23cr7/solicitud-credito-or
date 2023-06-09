@@ -132,9 +132,7 @@ USE_TZ = True
 #Ruta para poder utilizar archivos estaticos, como css, bootstrap
 STATIC_URL = '/static/'
 
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
