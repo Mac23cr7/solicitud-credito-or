@@ -1,6 +1,6 @@
 from django.db import models
-from apps.banco.models import Banco
-from apps.cliente.models import Cliente
+from banco.models import Banco
+from cliente.models import Cliente
 
 class Credito(models.Model):
     TIPOCREDITO = (

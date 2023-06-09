@@ -18,14 +18,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from apps.credito.views import Inicio
+from credito.views import Inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Inicio.as_view(), name = 'index'),
-    path('credito/', include(('apps.credito.urls','credito'))),
-    path('banco/', include(('apps.banco.urls','banco'))),
-    path('cliente/', include(('apps.cliente.urls','cliente'))),
+    path('credito/', include(('credito.urls','credito'))),
+    path('banco/', include(('banco.urls','banco'))),
+    path('cliente/', include(('cliente.urls','cliente'))),
 ]
 
 if settings.DEBUG:
