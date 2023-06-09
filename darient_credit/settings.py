@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.credito',
-    'apps.banco',
-    'apps.cliente',
+    'apps.banco.apps.BancoConfig',
+    'apps.credito.apps.CreditoConfig',
+    'apps.cliente.apps.ClienteConfig',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +132,9 @@ USE_TZ = True
 #Ruta para poder utilizar archivos estaticos, como css, bootstrap
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
