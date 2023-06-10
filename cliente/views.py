@@ -37,7 +37,7 @@ class ListarCliente(ListView):
 class CrearCliente(CreateView):
     model = Cliente
     form_class = ClienteForm
-    template_name = './general/clientes/crear_cliente.html'
+    template_name = 'crear_cliente.html'
 
     def post(self, request, *args, **kwargs):
         if request.is_ajax():
@@ -63,7 +63,7 @@ class CrearCliente(CreateView):
 class ActualizarCliente(UpdateView):
     model = Cliente
     form_class = ClienteForm
-    template_name = './general/clientes/actualizar_cliente.html'
+    template_name = 'actualizar_cliente.html'
 
     def post(self, request, *args, **kwargs):
         if request.is_ajax():
@@ -88,7 +88,7 @@ class ActualizarCliente(UpdateView):
 """ Metodo para eliminar cliente """
 class EliminarCliente(DeleteView):
     model = Cliente
-    template_name = './general/clientes/eliminar_cliente.html'
+    template_name = 'eliminar_cliente.html'
 
     def delete(self, request, pk, *args, **kwargs):
         if request.is_ajax():

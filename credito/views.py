@@ -46,7 +46,7 @@ class ListarCredito(ListView):
 class CrearCredito(CreateView):
     model = Credito
     form_class = CreditoForm
-    template_name = 'general/creditos/crear_credito.html'
+    template_name = 'crear_credito.html'
 
     def post(self, request, *args, **kwargs):
         if request.is_ajax():
