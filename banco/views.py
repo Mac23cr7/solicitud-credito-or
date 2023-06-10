@@ -36,7 +36,7 @@ class ListarBanco(ListView):
 class CrearBanco(CreateView):
     model = Banco
     form_class = BancoForm
-    template_name = 'general/bancos/crear_banco.html'
+    template_name = './general/bancos/crear_banco.html'
 
     def post(self, request, *args, **kwargs):
         if request.is_ajax():
