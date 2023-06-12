@@ -19,6 +19,7 @@ class Inicio(TemplateView):
 """ Metodo para listar los bancos de la BD """
 class ListarBanco(ListView):
     model = Banco
+    template_name = 'listar_banco.html'
 
     def get_queryset(self):
         return self.model.objects.all()

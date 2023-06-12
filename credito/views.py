@@ -20,6 +20,7 @@ class Inicio(TemplateView):
 """ Metodo para listar los creditos de la BD """
 class ListarCredito(ListView):
     model = Credito
+    template_name = 'listar_credito.html'
 
     def get(self, request, *args, **kwargs):
         if request.is_ajax():

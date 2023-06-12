@@ -20,6 +20,7 @@ class Inicio(TemplateView):
 """ Metodo para listar los clientes """
 class ListarCliente(ListView):
     model = Cliente
+    template_name = 'listar_cliente.html'
 
     def get_queryset(self):
         return self.model.objects.all()
