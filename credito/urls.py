@@ -10,5 +10,5 @@ urlpatterns = [
 
 """ url_avanzada """
 urlpatterns += [
-    path('inicio_credito/',TemplateView.as_view(template_name = 'general/creditos/listar_credito.html'), name = 'inicio_credito')
+    path('inicio_credito/',TemplateView.as_view(template_name = 'listar_credito.html'), name = 'inicio_credito')
 ]

@@ -9,5 +9,5 @@ urlpatterns = [
 
 """ url_avanzada """
 urlpatterns += [
-    path('inicio_banco/',TemplateView.as_view(template_name = 'general/bancos/listar_banco.html'), name = 'inicio_banco')
+    path('inicio_banco/',TemplateView.as_view(template_name = 'listar_banco.html'), name = 'inicio_banco')
 ]

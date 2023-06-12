@@ -11,5 +11,5 @@ urlpatterns = [
 
 """ urls_avanzadas """
 urlpatterns += [
-    path('inicio_cliente/',TemplateView.as_view(template_name = 'general/clientes/listar_cliente.html'), name = 'inicio_cliente')
+    path('inicio_cliente/',TemplateView.as_view(template_name = 'listar_cliente.html'), name = 'inicio_cliente')
 ]
